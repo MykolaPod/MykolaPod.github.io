@@ -5,7 +5,7 @@ permalink: /categories/
 ---
 
 {% for category in site.categories %}
-  <h3 id="{{ category[0] }}">{{ category[0] | capitalize }}</h3>
+  <h3 id="{{ category[0] }}">{{ category[0] }}</h3>
   <ul>
     {% assign pages_list = category[1] %}
     {% for post in pages_list %}
