@@ -175,71 +175,22 @@ private void SwitchOverTransferTypes(string typeName, IDbContext context, Guid r
 { 
     switch (typeName) 
     { 
-        case nameof(ItemTypeBase): 
-        case nameof(ItemType): 
-        case nameof(CustomItemType): 
-            QueueForTransfer<ItemTypeBase>(context, resultId); 
+        case nameof(EntityTypeBase): 
+        case nameof(EntityType): 
+        case nameof(CustomEntityType): 
+            QueueForTransfer<EntityTypeBase>(context, resultId); 
             break;
-        case nameof(SerializedEntityBase): 
-        case nameof(Item): 
-        case nameof(ItemGroup): 
-            QueueForTransfer<SerializedEntityBase>(context, resultId); 
+        case nameof(EntityTypeBase2): 
+        case nameof(EntityItem): 
+        case nameof(EntityItem2): 
+            QueueForTransfer<EntityTypeBase2>(context, resultId); 
             break; 
-        case nameof(ProcessBase): 
-        case nameof(ProcessSnapshot): 
-        case nameof(ProcessTemplate): 
-            QueueForTransfer<ProcessBase>(context, resultId); 
+        case nameof(EntityTypeBase3): 
+        case nameof(EntityType31): 
+        case nameof(EntityType41): 
+            QueueForTransfer<EntityTypeBase3>(context, resultId); 
             break; 
-        case nameof(ProcessStepBase): 
-        case nameof(PassFailProcessStep): 
-        case nameof(AssignItemToStandardItemTypeProcessStep): 
-        case nameof(SetCustomPropertyProcessStep): 
-        case nameof(SetGPSLocationStep): 
-        case nameof(AssignItemToCustomItemTypeProcessStep): 
-        case nameof(WithPictureStep):
-        case nameof(SetDateCustomPropertyProcessStep): 
-        case nameof(SetNumericCustomPropertyProcessStep): 
-        case nameof(SetTextCustomPropertyProcessStep): 
-        case nameof(TakePictureStep): 
-        case nameof(CaptureSignatureStep): 
-            QueueForTransfer<ProcessStepBase>(context, resultId); 
-            break; 
-        case nameof(CompletedProcessStepBase): 
-        case nameof(AssignItemToCustomItemTypeCompletedProcessStep): 
-        case nameof(WithPictureCompletedStep): 
-        case nameof(PassFailCompletedProcessStep): 
-        case nameof(SetNumericCustomPropertyCompletedProcessStep): 
-        case nameof(SetDateCustomPropertyCompletedProcessStep): 
-        case nameof(SetCustomPropertyCompletedProcessStep): 
-        case nameof(SetGPSLocationCompletedStep): 
-        case nameof(AssignItemToStandardItemTypeCompletedProcessStep): 
-        case nameof(TakePictureCompletedStep): 
-        case nameof(CaptureSignatureCompletedStep): 
-            QueueForTransfer<CompletedProcessStepBase>(context, resultId); 
-            break; 
-        case nameof(CustomPropertyBase): 
-        case nameof(ItemCustomProperty): 
-        case nameof(ItemTypeCustomProperty): 
-        case nameof(JobCustomProperty): 
-            QueueForTransfer<CustomPropertyBase>(context, resultId); 
-            break;
-        case nameof(ProcessPhase): 
-            QueueForTransfer<ProcessPhase>(context, resultId); 
-            break; 
-        case nameof(Picture): 
-            QueueForTransfer<Picture>(context, resultId); 
-            break; 
-        case nameof(ItemGroupType): 
-            QueueForTransfer<ItemGroupType>(context, resultId); 
-            break; 
-        case nameof(Job): 
-            QueueForTransfer<Job>(context, resultId); 
-            break; 
-        case nameof(ItemProcessBase): 
-        case nameof(ItemProcess): 
-        case nameof(ItemGroupProcess): 
-            QueueForTransfer<ItemProcessBase>(context, resultId); 
-            break; 
+        // etc...
         default: 
             return; 
     } 
