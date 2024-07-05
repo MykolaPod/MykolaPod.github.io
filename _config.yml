@@ -18,7 +18,7 @@ email: #your-email@example.com
 description: C# .NET Angular Xamarin and other examples and solutions of some specific and funny tasks by Mykola Pidopryhora
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mykolapod.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-linkedin_username: mykola-pidopryhora-46782372
+linkedin_username: микола-підопригора-46782372
 github_username:  mykolapod
 rss: RSS
 author: Mykola Pidopryhora
